@@ -1,0 +1,15 @@
+
+
+.inputDet{
+    /* background-color: rgb(214, 219, 224); */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px rgb(218, 206, 206),
+                 -1px -1px 2px rgb(218, 206, 206);
+    width: 35%;
+    margin: auto;
+}
+table{
+    margin: auto;
+    margin-top: 10px;
+}

@@ -1,0 +1,30 @@
+<div class="main">
+    <div class="inputDet">
+        <input type="text" [(ngModel)]="bookTitle" placeholder="enter title of the book"><br>
+        <input type="text" [(ngModel)]="bookView" placeholder="enter num of views"><br>
+        <button *ngIf="!flag" (click)="addbook()">Add Book</button>
+        <button *ngIf="flag" (click)="update()">Update</button>
+    </div>
+    <table border="2">
+        <thead>
+            <tr>
+
+                <th>Sl No.</th>
+                <th>Title</th>
+                <th>Views</th>
+                <th></th>
+                <th></th>
+
+            </tr>
+        </thead>
+        <thead>
+            <tr *ngFor="let book of books, let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{book.title}}</td>
+                <td>{{book.views}}</td>
+                <td><button (click)="delete(book.id)">Delete</button></td>
+                <td><button (click)="edit(book)">Edit</button></td>
+            </tr>
+        </thead>
+    </table>
+</div>
