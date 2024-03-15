@@ -1,0 +1,15 @@
+<div class="d-flex flex-wrap shadow rounded p-3">
+    <div class="w-25">
+        <img [src]="[productObj.image]" width="100%" height="100%" alt="">
+    </div>
+    <div class="w-75">
+        <h4>{{productdet}}</h4>
+        <p>{{productObj.description.slice(0,40)}}</p>
+        <div class="d-flex flex-wrap justify-content-around">
+            <b>{{productObj.category}}</b>
+
+            <b>${{productObj.price}}</b>
+        </div>
+    </div>
+    
+</div>
