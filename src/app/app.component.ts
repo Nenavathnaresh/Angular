@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crud';
+  name:any = "Naresh"
+  abc(e:any){
+    alert(e)
+  }
 }

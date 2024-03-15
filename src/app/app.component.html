@@ -1,3 +1,6 @@
-<div>
+<div class="mybox">
   <h1>Wellcome to App Component</h1>
+  <button (click)="abc('asd')" >click me.!</button>
+  <app-child [fn]="name" (pfn)="abc($event)" ></app-child>
+  <app-todolist></app-todolist>
 </div>
