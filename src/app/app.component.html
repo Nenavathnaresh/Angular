@@ -1,3 +1,18 @@
 <div>
   <h1>Wellcome to App Component</h1>
+  <input type="text" [(ngModel)]="firstname">
+   {{firstname}} <br><br>
+
+   <input type="radio" value="M" [(ngModel)]="gender">:Male
+   <input type="radio" value="F" [(ngModel)]="gender">:Female
+   <input type="radio" value="O" [(ngModel)]="gender">:Others
+   <h1>{{gender}}</h1>
+   <img *ngIf="gender==='M' " [src]="maleImg" width="200px" alt="">
+   <img *ngIf="gender=== 'F' " [src]="femaleImg" width="200px" alt="">
+
+   <div *ngFor="let tech of technologies">
+    <input type="checkbox" [value]="tech" (change)="selTech($event)">
+    {{tech}}
+   </div>
+   <h1 *ngFor="let t of selectedTech">{{t}}</h1>
 </div>
