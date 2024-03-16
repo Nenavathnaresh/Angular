@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
   products:any;
+  p:any;
+  
   constructor(public http:HttpClient){}
  
   ngOnInit(){

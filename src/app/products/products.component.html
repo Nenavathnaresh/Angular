@@ -1,11 +1,14 @@
 <div class="d-flex flex-wrap m-5 p-3 rounded bg-info ">
     <div class="w-50 bg-light">
         <h1>Products Titles</h1>
-        <ul *ngFor="let product of products">
+        <ul *ngFor="let product of products | paginate:{itemsPerPage:5, currentPage:p}">
             <li>
                 <a [routerLink]="['productDetails',product.title]" [queryParams]="product">{{product.title}}</a>
             </li>
         </ul>
+        <pagination-controls (pageChange)="p = $event">
+
+        </pagination-controls>
     </div>
     <div class="w-50 bg-light text-center">
         <h1>Products Details</h1>
