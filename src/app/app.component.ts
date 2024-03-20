@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crud';
+  salary:any = 26474833.36418638
+  dob:any = '10-13-2001';
+  students:any[] = ["Naresh","suresh","Divay","Puppy"];
+
 }

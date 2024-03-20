@@ -1,3 +1,25 @@
 <div>
-  <h1>Wellcome to App Component</h1>
+  <!-- <h1>Wellcome to App Component</h1>
+  <h1>{{salary}}</h1>
+  <h1>{{salary|number}}</h1>
+  <h1>{{salary|number:'10.3-5'}}</h1>
+  <h1>{{salary|currency}}</h1>
+  <h1>{{salary|currency:"INR"}}</h1>
+  <h1>{{salary|currency:"EUR"}}</h1>
+  <h1>{{salary|currency:"USD"}}</h1>
+  <h1>Date Pipe:</h1>
+  <h1>{{dob}}</h1>
+  <h1>{{dob|date}}</h1>
+  <h1>{{dob|date:"shortDate"}}</h1>
+  <h1>{{dob|date:"fullDate"}}</h1>
+  <h1>{{dob|date:"fullDate"|uppercase}}</h1>
+  <h1>{{dob|date|uppercase}}</h1>
+  <h1>{{dob|date:"format"}}</h1> -->
+  <h1>Custom Pipes:</h1>
+  <ul>
+    <li *ngFor="let student of students">{{student}}</li>
+  </ul>
+  <ul>
+    <li *ngFor="let student of students|sort">{{student}}</li>
+  </ul>
 </div>

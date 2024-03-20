@@ -3,10 +3,12 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
@@ -17,4 +19,4 @@ import { AppComponent } from './app.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
