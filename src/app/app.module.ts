@@ -3,14 +3,25 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+import { counterReducer } from './counter.reducer';
+import { CounterComponent } from './counter/counter.component';
+import { TodolistComponent } from './todolist/todolist.component';
+import { todoReducer } from './todolist.reducer';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CounterComponent,
+    TodolistComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    StoreModule.forRoot( {count:counterReducer, todos:todoReducer})
   ],
   providers: [
     provideClientHydration()

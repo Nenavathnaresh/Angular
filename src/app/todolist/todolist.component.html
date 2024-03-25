@@ -1,0 +1,7 @@
+<div class="mybox">
+    <input type="text" name="" id="" [(ngModel)]="newtodo">
+    <button (click)="addtodo()">Add Todo</button>
+    <ul>
+        <li *ngFor="let todo of todos$ | async">{{todo}}</li>
+    </ul>
+</div>
