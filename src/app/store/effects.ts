@@ -14,13 +14,13 @@ export class loginEffect {
             exhaustMap((action)=>{
                 return this.ls.userLogin(action.userData).pipe(
                     map((data)=>{
-                        console.log(data)
                         return loginSuccess({users:data})
-                        
                     }),
                     catchError(()=>EMPTY)
                 )
             })
         )
     )
+
+   
 }

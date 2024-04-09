@@ -14,4 +14,12 @@ export class LoginService {
     
     return this.http.get(`${this.endApi}?username=${userData.username}&password=${userData.password}`)
   }
+
+  isLoggedIn(){
+    return window.localStorage.getItem('id') ? true:false ;
+  }
+
+  getAllProducts():any{
+    return this.http.get("https://fakestoreapi.com/products")
+  }
 }

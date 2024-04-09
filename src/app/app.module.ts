@@ -10,11 +10,15 @@ import { reducers, metaReducers } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { loginReducer } from './store/login.reducer';
 import { loginEffect } from './store/effects';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
