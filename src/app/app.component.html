@@ -1,4 +1,14 @@
 <div>
   <h1>Wellcome to App Component</h1>
-
+  <div class="accordian">
+    <div class="accordian-item" *ngFor="let item of items; let i = index" [ngClass]="{'active':i==activeIndex}">
+      <div class="accordian-title" (click)="toggleAccordian(i)">
+        {{item.title}}
+      </div>
+      <div class="accordian-content" *ngIf="i==activeIndex">
+        {{item.content}}
+      </div>
+    </div>
+  </div>
+  <app-accordian></app-accordian>
 </div>
